@@ -9,7 +9,7 @@ admin.initializeApp({
 
 let investorsCount = 0;
 let weiRaised = 0;
-const update = function () {
+const update = () => {
 	investorsCount += 1;
 	weiRaised += (1000 + Math.floor(500 * Math.random()));
 
@@ -19,4 +19,11 @@ const update = function () {
 	});
 };
 
-SetInterval(update, 10000);
+const timer = setInterval(update, 10000);
+
+const beforeDie = () => {
+	clearInterval(timer);
+};
+
+process.on('SIGTERM', beforeDie);
+process.on('SIGINT', beforeDie);
