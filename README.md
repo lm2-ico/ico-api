@@ -1,1 +1,1 @@
-# ico-api
+# lm2-ico-api
