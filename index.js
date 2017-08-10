@@ -13,7 +13,7 @@ const update = () => {
 	investorsCount += 1;
 	weiRaised += (1000 + Math.floor(500 * Math.random()));
 
-	admin.Database().ref("preico/progress").set({
+	admin.database().ref("preico/progress").set({
 		investorsCount,
 		weiRaised
 	});
