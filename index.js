@@ -19,8 +19,6 @@ const update = () => {
 	});
 };
 
-// TODO http health check
-
 const timer = setInterval(update, 10000);
 
 const beforeDie = () => {
