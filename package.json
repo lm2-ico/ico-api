@@ -9,6 +9,7 @@
   "author": "pklepcin",
   "license": "ISC",
   "dependencies": {
-    "firebase-admin": "^5.1.0"
+    "firebase-admin": "^5.1.0",
+    "web3": "latest"
   }
 }
