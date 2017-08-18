@@ -33,10 +33,10 @@ const update = async () => {
     try {
 
 	    investorCount = Number(await preICOcontract.methods.investorCount().call());
-			weiRaised = Number(await preICOcontract.methods.weiRaised().call()) / Math.pow(10,18);
+			weiRaised = (Number(await preICOcontract.methods.weiRaised().call()) / Math.pow(10,18)).toFixed(2);
 			 priceETH = Number(await preICOcontract.methods.priceWEI().call());
 			  priceLC = Number(await preICOcontract.methods.priceLC().call());
-			   weiCap = Math.floor(2000000 * priceETH / priceLC);
+			   weiCap = (2000000.0 * priceETH / priceLC).toFixed(2);
 
 		let needUpdate = 
 			(objectToSave.investorCount != investorCount) ||
