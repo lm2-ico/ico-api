@@ -34,7 +34,7 @@ const update = async () => {
 
 	    investorCount = Number(await preICOcontract.methods.investorCount().call());
 			weiRaised = (Number(await preICOcontract.methods.weiRaised().call()) / Math.pow(10,18)).toFixed(2);
-			 priceETH = Number(await preICOcontract.methods.priceWEI().call());
+			 priceETH = Number(await preICOcontract.methods.priceETH().call());
 			  priceLC = Number(await preICOcontract.methods.priceLC().call());
 			   weiCap = (2000000.0 * priceETH / priceLC).toFixed(2);
 
