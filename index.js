@@ -15,7 +15,7 @@ admin.initializeApp({
 });
 
 let investorCount = 1473;
-// let weiRaised = 1437;
+let weiRaised = 1437;
 // const priceETH = Number(await ICOcontract.methods.priceETH().call());
 // const priceLC = Number(await ICOcontract.methods.priceLC().call());
 const priceETH = 1;
