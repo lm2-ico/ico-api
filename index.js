@@ -35,6 +35,13 @@ let objectToSave = {
 
 let timer;
 
+admin.database().ref("ico/progress/usdRaised").on("value", (data) => {
+	usdRaised = data.val();
+	// console.log(`usdRaised =  ${usdRaised}`);
+}, (err) => {
+	console.log(`The read failed: ${err.code}`);
+});
+
 const update = async () => {
     try {
 
